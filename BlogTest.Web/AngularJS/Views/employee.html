@@ -1,0 +1,70 @@
+﻿<h2>Employee - CRUD</h2>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+    <a ui-sref="addEmployee" ui-sref-opts="{reload: true, notify: true}"
+       class="col-lg-2 col-md-2 col-sm-2 col-xs-12 btn btn-primary pull-right">
+        Add Employee
+    </a>
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <table class="table table-striped table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    Employee Id
+                </th>
+
+                <th>
+                    Employee Name
+                </th>
+
+                <th>
+                    Date Of Birth
+                </th>
+
+                <th>
+                    Gender
+                </th>
+
+                <th>
+                    Salary
+                </th>
+
+                <th>
+                </th>
+                <th>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="employee in EC.employees">
+                <td>
+                    {{employee.Id}}
+                </td>
+                <td>
+                    {{employee.EmployeeName}}
+                </td>
+                <td>
+                    {{employee.DateOfBirth | date : "dd-MMM-yyyy"}}
+                </td>
+                <td>
+                    {{employee.Gender.Name}}
+                </td>
+                <td>
+                    {{employee.Salary}}
+                </td>
+                <td>
+                    <a ui-sref="addEmployee({employeeId:employee.Id})" title="Edit">
+                        <span class="fa fa-edit"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href="javascript:void(0)" ng-click="EC.deleteEmployee(employee.Id)" title="Delete">
+                        <span class="fa fa-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

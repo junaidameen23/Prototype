@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="lmtApp">
+<head>
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <title>Employee - CRUD</title>
+    <base href="/" />
+    <link href="Content/CSS/bootstrap.css" rel="stylesheet" />
+    <link href="Content/CSS/bootstrap-social.css" rel="stylesheet" />
+    <link href="Content/CSS/font-awesome.css" rel="stylesheet" />
+    <link href="Content/CSS/sticky-footer-navbar.css" rel="stylesheet" />
+    <link href="Content/CSS/Custom.css" rel="stylesheet" />
+    <link href="Content/CSS/animate.css" rel="stylesheet" />
+    <link href="Content/CSS/angular-toastr.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Ajax Loader -->
+    <div class="loader-div" data-loader style="display:none">
+        <img src="../Content/Images/loader-indicator.gif" class="ajax-loader" />
+    </div>
+
+    <!-- Header -->
+    <nav class="navbar navbar-default wobble animated navbar-static-top">
+        <div class="container-fluid">
+        </div>
+    </nav>
+
+    <!-- Body -->
+    <div class="container">
+        <div data-ui-view="">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer wobble animated">
+        <div class="container">
+            <div class="row">
+                Blog Application by Junaid Ameen.
+            </div>
+        </div>
+    </footer>
+
+    <script src="Content/Scripts/jquery-1.9.1.js"></script>
+    <script src="Content/Scripts/bootstrap.js"></script>
+    <script src="Content/Scripts/moment.js"></script>
+
+    <!-- 3rd party libraries -->
+    <script src="Content/Scripts/angular.js"></script>
+    <script src="Content/Scripts/ocLazyLoad.js"></script>
+    <script src="Content/Scripts/angular-ui-router.js"></script>
+    <script src="Content/Scripts/angular-resource.js"></script>
+    <script src="Content/Scripts/angular-toastr.tpls.js"></script>
+
+    <!-- Load app main script -->
+    <script src="AngularJS/app.js"></script>
+
+    <!--Directives-->
+    <script src="AngularJS/Directives/validSubmit.js"></script>
+
+    <!-- Load Angular services -->
+    <script src="AngularJS/Services/genericService.js"></script>
+
+</body>
+</html>
